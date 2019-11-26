@@ -21,18 +21,18 @@ def main():
                   {'school_class': '7g', 'scores': [5, 5, 4, 5, 3]},
                   {'school_class': '9a', 'scores': [2, 4, 4, 2, 5]}]
 
-    i = 0
     school_mid = 0
 
     for classes in all_scores:
         class_mid = 0
         class_mid = sum(classes['scores'])/len(classes['scores'])
         school_mid += class_mid
-        i += 1
         class_name = classes['school_class']
         print(f'Средняя оценка по классу {class_name}  : {class_mid}')
+        # почему print(f'Средняя оценка по классу {classes['school_class']}  : {class_mid}')
+        # выдает ошибку, ругаясь на 'school_class' ?
 
-    school_mid = round(school_mid / i, 1)
+    school_mid = round(school_mid / len(all_scores), 1)
 
     print(f'Средняя оценка по школе      : {school_mid}')
 
