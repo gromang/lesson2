@@ -31,7 +31,11 @@ def ask_user():
 
     while True:
         ask = input('Пользователь:')
-        print(f'Программа: {ask_user_dict(ask)}')
+        if ask.lower() != "пока":
+            print(f'Программа: {ask_user_dict(ask)}')
+        else:
+            print('Программа: Всего доброго!')
+            break
 
 
 if __name__ == "__main__":
