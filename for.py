@@ -29,8 +29,8 @@ def main():
         class_mid = sum(classes['scores'])/len(classes['scores'])
         school_mid += class_mid
         i += 1
-
-        print(f'Средняя оценка по классу {classes['school_class']}  : {class_mid}')
+        class_name = classes['school_class']
+        print(f'Средняя оценка по классу {class_name}  : {class_mid}')
 
     school_mid = round(school_mid / i, 1)
 
